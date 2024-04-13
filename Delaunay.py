@@ -15,7 +15,6 @@ class DelaunayTriangulation:
         return triangles
 
     def incremental_delaunay(self):
-        # Define a large bounding triangle
         min_x = min(p.x for p in self.points)
         max_x = max(p.x for p in self.points)
         min_y = min(p.y for p in self.points)
@@ -36,13 +35,11 @@ class DelaunayTriangulation:
             bad_triangles = []
             polygon = []
 
-            # Find triangles that are no longer valid
             for triangle in triangles:
                 center, radius = circumcircle(*triangle)
                 if center and distance(point, center) < radius:
                     bad_triangles.append(triangle)
 
-            # Remove bad triangles and find polygon edges
             triangles = [tri for tri in triangles if tri not in bad_triangles]
             polygon_edges = set()
             for bad in bad_triangles:
@@ -53,12 +50,10 @@ class DelaunayTriangulation:
                     else:
                         polygon_edges.add(edge)
 
-            # Fill polygon hole with new triangles
             for edge in polygon_edges:
                 new_tri = tuple(edge) + (point,)
                 triangles.append(new_tri)
 
-        # Remove triangles containing the vertices of the super triangle
         triangles = [tri for tri in triangles if super_triangle[0] not in tri and super_triangle[1] not in tri and super_triangle[2] not in tri]
 
         return triangles
