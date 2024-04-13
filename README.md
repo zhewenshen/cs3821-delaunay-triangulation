@@ -1,6 +1,5 @@
-# Delaunay Triangulation
+# Delaunay Triangulation (WORK IN PROGRESS)
 
-## WORK IN PROGRESS
 **TODO:**
 - [X] Brute Force
 - [X] Incremental (Bowyer–Watson)
