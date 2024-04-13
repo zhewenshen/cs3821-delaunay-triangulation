@@ -3,12 +3,23 @@
 ## WORK IN PROGRESS
 **TODO:**
 - [X] Brute Force
-- [X] Incremental
-- [ ] Divide and Conquer
-- [ ] Sweep Hull
-- [ ] Bowyer–Watson
+- [X] Incremental (Bowyer–Watson)
+- [X] Divide and Conquer (Guibas and Stolfi)
+- [ ] Benchmark
+
+## Getting Started
+### Prerequisites
+Ensure you have `python3` and `pip` installed on your machine. Then, install the necessary dependencies:
+```
+pip install -r requirements.txt
+```
+### Running the Scripts
+To generate the images and performance data, execute the provided shell script:
+```
+./run.sh
+```
+**NOTE**: See `main.py` for possible arguments and `run.sh` for examples of how to use them.
 
 ## Sample Output
 
-### Incremental DT
-![Incremental](./out/delaunay_triangulation_20240413-185014.png)
+![DT](./out/brute.png)
