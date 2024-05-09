@@ -1,10 +1,10 @@
-# Delaunay Triangulation (WORK IN PROGRESS)
+# Delaunay Triangulation
 
 **TODO:**
 - [X] Brute Force
 - [X] Incremental (Bowyer–Watson)
 - [X] Divide and Conquer (Guibas and Stolfi)
-- [ ] Benchmark
+- [X] Benchmark
 
 ## Getting Started
 ### Prerequisites
@@ -20,5 +20,3 @@ To generate the images and performance data, execute the provided shell script:
 **NOTE**: See `main.py` for possible arguments and `run.sh` for examples of how to use them.
 
 ## Sample Output
-
-![DT](./out/brute.png)
